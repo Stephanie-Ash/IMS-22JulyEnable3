@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `ims`.`orders` (
 	`customer_id` INT,
 	`order_total` DECIMAL(8, 2) DEFAULT 0.00,
 	PRIMARY KEY (`id`),
-	FOREIGN KEY (`customer_id`) REFERENCES `ims`.`customers` (`id`) ON DELETE SET NULL
+	FOREIGN KEY (`customer_id`) REFERENCES `ims`.`customers` (`id`) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS `ims`.`order_line_items` (
